@@ -7,6 +7,7 @@ import { SQLite } from '@ionic-native/sqlite'
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { DatabaseProvider } from '../providers/database/database';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { HomePage } from '../pages/home/home';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    SQLite
+    SQLite,
+    DatabaseProvider
   ]
 })
 export class AppModule {}
